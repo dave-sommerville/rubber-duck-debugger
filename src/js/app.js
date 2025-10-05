@@ -11,16 +11,37 @@ function getRandomElement(arr) {
 function create(element, scope = document) {
   return scope.createElement(element);
 }
+function addClass(element, className) {
+  element.classList.add(className);
+}
 const outputArea = select('.output-area');
 const textForm = select('.text-form');
 const textInput = select('.text-input');
-const replies = ['Oh yeah', 'I get it']
+const replies = [
+    "Oh yeah?",
+  "I hear ya.",
+  "Gotcha.",
+  "Makes sense.",
+  "Right, right.",
+  "Ah, I see.",
+  "Totally.",
+  "For sure.",
+  "Hmm, interesting.",
+  "Yeah, I get that.",
+  "Oh wow, really?",
+  "That figures.",
+  "Yeah, no kidding.",
+  "Fair enough.",
+  "I know what you mean."
+];
 function processQuery() {
   const inputText = textInput.value.trim();
   if (inputText === '') return;
   const userP = create('p');
+  addClass(userP, 'user-text');
   userP.textContent = inputText;
   const randomP = create('p');
+  addClass(randomP, 'duck-text');
   randomP.textContent = getRandomElement(replies);
   outputArea.appendChild(userP);
   outputArea.appendChild(randomP);

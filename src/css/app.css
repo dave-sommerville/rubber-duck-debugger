@@ -1,11 +1,63 @@
 @charset "utf-8";
 
-body {
+main {
   width: 100%;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   font-family:  "Bebas Neue", "Inter", sans-serif;
   background-color: #449;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+h2 {
+  font-size: 2.5rem;
+  margin: 10px;
+}
+p {
+  font-size: 2.1rem;
+  max-width: 600px;
+  text-wrap: wrap;
+  margin: 10px 0;
+  padding: 10px;
+}
+img {
+  position: fixed;
+  margin: 0 auto;
+  top: 20px;
+  height: 80px;
+  width: 80px;
 }
 
+textarea {
+  min-width: 60svw;
+  min-height: 250px;
+  resize: vertical;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  padding: 5px 15px;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  margin: 10px;
+}
+.user-text {
+  border-radius: 12px;
+  background-color: #55a;
+}
+.duck-text {
+  border-radius: 12px;
+  background-color: #338;
+}
