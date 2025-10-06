@@ -17,6 +17,8 @@ function addClass(element, className) {
 const outputArea = select('.output-area');
 const textForm = select('.text-form');
 const textInput = select('.text-input');
+const faqButton = select('.faq');
+const dialog = select('dialog');
 const replies = [
     "Oh yeah?",
   "I hear ya.",
@@ -51,4 +53,13 @@ function processQuery() {
 listen("submit", textForm, (e) => {
   e.preventDefault();
   processQuery();
+});
+listen("click", faqButton, ()=> {
+  dialog.showModal();
+});
+
+dialog.addEventListener('click', (evt) => {
+  if (evt.target === dialog) {
+    dialog.close();
+  }
 });

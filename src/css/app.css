@@ -19,13 +19,25 @@ h2 {
   font-size: 2.5rem;
   margin: 10px;
 }
+h3 {
+  font-size: 2.2rem;
+}
 p {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   max-width: 600px;
   text-wrap: wrap;
   margin: 10px 0;
   padding: 10px;
 }
+.faq {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.faq:hover {
+  color: #424;
+}
+
 img {
   position: fixed;
   margin: 0 auto;
@@ -61,3 +73,26 @@ button {
   border-radius: 12px;
   background-color: #338;
 }
+    /* Dialog box styles */
+    dialog {
+      border: 0;
+      border-radius: 8px;
+      padding: 1.2rem;
+      width: min(520px, 90%);
+      box-shadow: 0 12px 40px rgba(2,6,23,0.25);
+      transform-origin: center;
+      animation: dialog-in .18s ease-out;
+    }
+
+    /* Backdrop style (semi-transparent overlay) */
+    dialog::backdrop {
+      background: rgba(2,6,23,0.45);
+      backdrop-filter: blur(2px);
+    }
+
+    /* Small entrance animation */
+    @keyframes dialog-in {
+      from { opacity: 0; transform: translateY(-6px) scale(.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
